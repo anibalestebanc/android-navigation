@@ -1,0 +1,23 @@
+ext.deps = [:]
+
+def versions = [:]
+versions.java = JavaVersion.VERSION_1_8
+
+versions.compile_sdk = 32
+versions.min_sdk = 23
+versions.target_sdk = 32
+versions.kotlin_core_ktx = "1.8.0"
+versions.app_compat = "1.4.2"
+
+versions.junit = "4.13.2"
+ext.versions = versions
+
+def deeps = [:]
+
+deps.kotlin_core_ktx = "androidx.core:core-ktx:$versions.kotlin_core_ktx"
+deps.app_compat = "androidx.appcompat:appcompat:$versions.app_compat"
+ext.deeps = deeps
+
+def testDeeps = [:]
+testDeeps.junit = "junit:junit:"
+ext.testDeeps = testDeeps
